@@ -13,7 +13,7 @@
 <body class="container">
 
 <div id="root">
-    <button class="btn btn-primary" v-on:click="sayHi()">Press me</button>
+    <input v-model="input" @keyup.13="output()">
 </div>
 
 </body>
@@ -24,8 +24,8 @@
             input: ""
         },
         methods: {
-            sayHi: function () {
-                alert("Hi");
+            output: function () {
+                alert(this.input * 10);
             }
         }
     });
