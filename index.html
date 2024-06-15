@@ -15,6 +15,7 @@
 <div id="root">
     <h3>{{ sayHi() }}</h3>
     <h4 v-show="wantToShow">{{ title }}</h4>
+    <div v-html="code"></div>
 </div>
 
 </body>
@@ -24,7 +25,8 @@
         data: {
             title: 'Start', // browser console vm.title = 'New value'
             person: ["Tim", 27, true],
-            wantToShow: false
+            wantToShow: false,
+            code: "<p>Some text</p>"
         },
         methods: {
             sayHi: function () {
