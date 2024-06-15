@@ -14,7 +14,7 @@
 
 <div id="root">
     <h3>{{ sayHi() }}</h3>
-    <h4>{{ title }}</h4>
+    <h4 v-show="wantToShow">{{ title }}</h4>
 </div>
 
 </body>
@@ -23,7 +23,8 @@
         el: "#root",
         data: {
             title: 'Start', // browser console vm.title = 'New value'
-            person: ["Tim", 27, true]
+            person: ["Tim", 27, true],
+            wantToShow: false
         },
         methods: {
             sayHi: function () {
