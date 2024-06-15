@@ -14,13 +14,15 @@
 
 <div id="root">
     <h3>{{ sayHi() }}</h3>
+    <h4>{{ title }}</h4>
 </div>
 
 </body>
 <script type="text/javascript">
-    new Vue({
+    var vm = new Vue({
         el: "#root",
         data: {
+            title: 'Start', // browser console vm.title = 'New value'
             person: ["Tim", 27, true]
         },
         methods: {
