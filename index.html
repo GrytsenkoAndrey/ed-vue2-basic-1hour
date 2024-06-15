@@ -21,16 +21,13 @@
 <body class="container">
 
 <div id="root">
-    <h1>Radio buttons</h1>
-    <div class="form-group">
-        <label>Male</label>
-        <input type="radio" value="male" v-model="gender">
-    </div>
-    <div class="form-group">
-        <label>Female</label>
-        <input type="radio" value="female" v-model="gender">
-    </div>
-    {{ gender }}
+    <h1>Selection</h1>
+    <select v-model="selection">
+        <option>Male</option>
+        <option>Female</option>
+        <option>no gender</option>
+    </select>
+    <p>{{ selection }}</p>
 </div>
 
 </body>
@@ -38,7 +35,7 @@
     var vm = new Vue({
         el: "#root",
         data: {
-           gender: ""
+            selection: ""
         }
     });
 </script>
