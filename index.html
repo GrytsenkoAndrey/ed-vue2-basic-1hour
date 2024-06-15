@@ -13,7 +13,10 @@
 <body class="container">
 
 <div id="root">
-    <input v-model="input" @keyup.enter="output()">
+    <button class="btn btn-primary" @click="a++">a++</button>
+    <p>{{ compA }}</p>
+    <button class="btn btn-primary" @click="b++">b++</button>
+    <p>{{ compB }}</p>
 </div>
 
 </body>
@@ -21,13 +24,21 @@
     var vm = new Vue({
         el: "#root",
         data: {
-            input: ""
+            a: 0,
+            b: 0
         },
-        methods: {
-            output: function () {
-                alert(this.input * 10);
+        computed: {
+            compA: function () {
+                console.log('compA was clicked');
+                return this.a;
+            },
+            compB: function () {
+                console.log('compB was clicked');
+                return this.b;
             }
         }
+        // methods always called even it nothing to do
+        // but computed properties does not
     });
 </script>
 </html>
