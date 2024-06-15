@@ -20,22 +20,31 @@
 </head>
 <body class="container">
 
-<div id="root">
-    <h1>Selection</h1>
-    <select v-model="selection">
-        <option>Male</option>
-        <option>Female</option>
-        <option>no gender</option>
-    </select>
-    <p>{{ selection }}</p>
-</div>
+<header id="header">{{ title }}</header>
+
+<section id="content">
+    <h2>{{ title }}</h2>
+    <button class="btn btn-secondary" @click="changeTitleHeader()">Change title</button>
+</section>
 
 </body>
 <script type="text/javascript">
     var vm = new Vue({
-        el: "#root",
+        el: "#header",
         data: {
-            selection: ""
+            title: 'Header'
+        }
+    });
+
+    var vm2 = new Vue({
+        el: "#content",
+        data: {
+            title: 'Main content'
+        },
+        methods: {
+            changeTitleHeader: function () {
+                vm.title = 'New header';
+            }
         }
     });
 </script>
