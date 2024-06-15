@@ -21,8 +21,10 @@
 <body class="container">
 
 <div id="root">
-    <h1 v-if="hc">Hello</h1>
-    <h1 v-else>Bye</h1>
+    <h1>Loop</h1>
+    <ul>
+        <li v-for="name in myArray">{{ name }}</li>
+    </ul>
 </div>
 
 </body>
@@ -30,7 +32,7 @@
     var vm = new Vue({
         el: "#root",
         data: {
-           hc: true
+           myArray: ["Sahra", 'Tim', 'Timo']
         }
     });
 </script>
