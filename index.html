@@ -13,7 +13,7 @@
 <body>
 
 <div id="root">
-    <h3>{{ sayHi('Sahra') }}</h3>
+    <h3>{{ sayHi() }}</h3>
 </div>
 
 </body>
@@ -24,8 +24,8 @@
             person: ["Tim", 27, true]
         },
         methods: {
-            sayHi: function (name) {
-                return "Hi, " + name;
+            sayHi: function () {
+                return "Hi, " + this.person[0];
             }
         }
     });
