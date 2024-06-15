@@ -13,7 +13,7 @@
 <body>
 
 <div id="root">
-    <img :src="images.src" :alt="images.alt" :title="images.title">
+    <input v-model="input"><p>{{ input }}</p>
 </div>
 
 </body>
@@ -21,16 +21,7 @@
     var vm = new Vue({
         el: "#root",
         data: {
-            images: {
-                src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT8xzzIRFqCm9RH4qvkuzNjCTEDzLDXaYpfdJkLYtNSOOlpPic7kf1R4DxPX6W5fyyaos&usqp=CAU",
-                alt: 'img1',
-                title: 'image 1'
-            }
-        },
-        methods: {
-            sayHi: function () {
-                return "Hi, " + this.person[0];
-            }
+            input: ""
         }
     });
 </script>
