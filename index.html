@@ -21,10 +21,9 @@
 <body class="container">
 
 <div id="root">
-    <h1>Loop</h1>
-    <ul>
-        <li v-for="(x, index) in myArray">{{ index }}) {{ x }}</li>
-    </ul>
+    <h1>Checkbox</h1>
+    <input type="checkbox" v-model="active">
+    <p>{{ active }}</p>
 </div>
 
 </body>
@@ -32,7 +31,7 @@
     var vm = new Vue({
         el: "#root",
         data: {
-           myArray: ["Sahra", 'Tim', 'Timo']
+           active: false
         }
     });
 </script>
