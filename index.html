@@ -13,9 +13,7 @@
 <body>
 
 <div id="root">
-    <h1>{{ title }}</h1>
-    <p>{{ myArray[0] }}</p>
-    <p>{{ myObjectArray[0].name }}</p>
+    <h3>{{ sayHi('Sahra') }}</h3>
 </div>
 
 </body>
@@ -23,14 +21,12 @@
     new Vue({
         el: "#root",
         data: {
-            title: "vue beginner",
-            number: 6,
-            booleanValue: true,
-            myArray: ["Tim", 27, true],
-            myObjectArray: [
-                {name: "Tom", age: 27},
-                {name: "Jim", age: 29}
-            ]
+            person: ["Tim", 27, true]
+        },
+        methods: {
+            sayHi: function (name) {
+                return "Hi, " + name;
+            }
         }
     });
 </script>
