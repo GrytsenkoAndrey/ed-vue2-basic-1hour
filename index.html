@@ -13,9 +13,7 @@
 <body>
 
 <div id="root">
-    <h3>{{ sayHi() }}</h3>
-    <h4 v-show="wantToShow">{{ title }}</h4>
-    <div v-html="code"></div>
+    <img v-bind:src="images.src" v-bind:alt="images.alt" v-bind:title="images.title">
 </div>
 
 </body>
@@ -23,10 +21,11 @@
     var vm = new Vue({
         el: "#root",
         data: {
-            title: 'Start', // browser console vm.title = 'New value'
-            person: ["Tim", 27, true],
-            wantToShow: false,
-            code: "<p>Some text</p>"
+            images: {
+                src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT8xzzIRFqCm9RH4qvkuzNjCTEDzLDXaYpfdJkLYtNSOOlpPic7kf1R4DxPX6W5fyyaos&usqp=CAU",
+                alt: 'img1',
+                title: 'image 1'
+            }
         },
         methods: {
             sayHi: function () {
